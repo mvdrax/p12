@@ -17,6 +17,7 @@
     <style>
         body {
             font-family: 'DM Serif Display', serif;
+            scroll-behavior: smooth;
         }
 
         h1,
@@ -46,9 +47,9 @@
 
         #menu-container {
     position: relative;
-    width: 150px;
+    width: 210px;
             height: 150px;
-            margin-right: 20px;
+          
   margin-top: 20px;
   font-size: 30px;
   margin-bottom: 20px;
@@ -62,19 +63,19 @@
 #drop-menu {
     list-style: none;
             padding: 0;
-            margin: 0;
+            
             background-color: #E8EDF5;
             border-radius: 10px;
   margin-top: 10px;
     list-style-type: none;
     padding: 0;
-    margin: 0;
     opacity: 0;
     visibility: hidden;
     max-height: 0;
     overflow: hidden;
-    position: absolute;
-    
+  
+    border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
@@ -153,9 +154,8 @@
         .menuic {
             display: flex;
             justify-content: end;
-            margin-right: 10px;
-            width: 19%;
-  margin-left: 105px;
+            margin-right: 24px;
+
         }
 
         /*#CFE0F9*/
@@ -175,7 +175,7 @@
     margin-top: 56px;
     justify-content: space-around;
     background-color: #E8EDF5;
-    background-image: url('assets/Soft-blue-watercolor-background-Graphics-39706046-1.jpg');;
+    background-image: url('assets/Soft-blue-watercolor-background-Graphics-39706046-1.jpg');
     width: 91.5%;
     padding: 62px;
 
@@ -272,21 +272,133 @@ h3.scroll-on-load-txt {
     animation: scrollTxt 2s ease-in-out;
 }
 
-    </style>
+
+.skills {
+    background-image: url('assets/Soft-blue-watercolor-background-Graphics-39706046-1.jpg');
+    display: flex;
+    flex-direction: column;
+}
+   
+.skillsIcns {
+    width: 100%;
+            cursor: pointer;
+            height: 100px;
+
+}
+
+.skills h3 {
+    text-align: center;
+}
+   
+.skillsIcnsBox {
+    display: flex;
+    width: 77%;
+  gap: 36px;
+
+}
+
+.skillsIcnsBox img {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 0.3s ease-in-out
+    ;
+}
+
+.skillsIcnsBox img.visible {
+    opacity: 1;
+}
+
+
+
+
+.skillsBox {
+    display: flex;
+    justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap: 47px;
+  margin-bottom: 70px;
+}
+   
+
+        .skillsIcns:hover {
+    transform: scale(1.2);  
+        }
+
+
+        .skillsIcnsBox figure {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+  flex-direction: column;
+  margin: 0;
+
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out, transform 0.3s ease-in-out
+    ;
+
+}
+
+.skillsIcnsBox figure.visible2 {
+    opacity: 1;
+}
+
+
+
+
+.skillsIcnsBox figcaption {
+    
+    width: 100%;
+    font-style: italic;
+  text-align: center;
+  margin-left: -13px;
+    color: black;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.skillsIcnsBox figure:hover figcaption {
+    opacity: 1;
+}
+
+
+
+.card {
+    display: flex;
+    width: 33%;
+   
+}
+
+.glrProjects {
+    display: flex;
+     flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.glrProjects img {
+    width: 100%;
+}
+
+
+
+
+   </style>
 </head>
 <body>
     <header id="header" >
     <nav class="main-nav">
         
-        <img src="/assets/istockphoto-1170794027-612x612.jpg" class="logoimg">
+        <img src="/assets/OIG.GKfC.jpg" class="logoimg">
         
      
     <div id="menu-container">
         <div id="menu-trigger"><i class="fa-solid fa-bars  menuic" id="menucn"></i></div>
         <ul id="drop-menu">
             <li><a href="#pres">Présentation</a></li>
-            <li><a href="#">Option 2</a></li>
-            <li><a href="#">Option 3</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#">Projets</a></li>
         </ul>
     </div>
     </nav>
@@ -325,10 +437,92 @@ h3.scroll-on-load-txt {
    
 
     </section>
+    <section class="skills" id="skills">
+    <div class="skillsBox">
+    <h3>Mes compétences</h3>
+    <div class="skillsIcnsBox">
+       <figure>
+    <img src="./assets/sass_logo_icon_214630.png" class="skillsIcns">
+    <figcaption>SASS</figcaption>
+    </figure> 
+    <figure>
+    <img src="./assets/103077.png" class="skillsIcns" >
+    <figcaption>HTML</figcaption>
+    </figure>
+    <figure>
+    <img src="./assets/103081.png" class="skillsIcns" >
+    <figcaption>CSS</figcaption>
+    </figure>
+    <figure>
+    <img src="./assets/6943960.png" class="skillsIcns">
+    <figcaption>Javascript</figcaption>
+</figure>
+<figure>
+    <img src="./assets/reactjs_logo_icon_206693.png" class="skillsIcns">
+    <figcaption>React</figcaption>
+</figure>
+    <figure>
+    <img src="./assets/nodejs_logo_icon_214669.png" class="skillsIcns" >
+    <figcaption>Node.js</figcaption>
+</figure>
+    <figure>
+    <img src="./assets/free-redux-3627245-3029653.png" class="skillsIcns">
+    <figcaption>Redux</figcaption>
+ </figure>
+    <figure>
+       <img src="./assets/147085828-1978e8b5-caf1-48b4-9376-ed1183007566.png" class="skillsIcns" >
+       <figcaption>MongoDB</figcaption>
+    </figure>
+    </div>
+</div>
+   </section>
+    <section>
+
+
     
+        <h3>Mes projets</h3>
+        <div class="glrProjects">
+
+        <div class="card">
+        <h4>Titre</h4>
+        <img src="./assets/Capture d’écran (1393).png">
+
+        </div>
+         
+        <div class="card">
+            <h4>Titre</h4>
+            <img src="./assets/Capture d’écran (1386).png">
+    
+            </div>
 
 
+            <div class="card">
+                <h4>Titre</h4>
+                <img src="./assets/Capture d’écran (1388).png">
+        
+                </div>
 
+                <div class="card">
+                    <h4>Titre</h4>
+                    <img src="./assets/Capture d’écran (1389).png">
+            
+                    </div>
+
+                    <div class="card">
+                        <h4>Titre</h4>
+                        <img src="./assets/Capture d’écran (1391).png">
+                
+                        </div>
+
+                        <div class="card">
+                            <h4>Titre</h4>
+                            <img src="./assets/Capture d’écran (1392).png">
+                    
+                            </div>
+
+        </div>
+
+</section>
 
 
 
@@ -360,6 +554,70 @@ function stickyHeader() {
         header.classList.remove("sticky");
     }
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.skillsIcnsBox img');
+
+    function checkScroll() {
+        images.forEach((image, index) => {
+            const position = image.getBoundingClientRect().top;
+
+            if (position < window.innerHeight && position > 0) {
+                setTimeout(() => {
+                    image.classList.add('visible');
+                }, (index + 1) * 400);
+            }
+        });
+    }
+
+    // Déclencher la fonction initiale au chargement de la page
+    checkScroll();
+
+    // Ajouter un écouteur d'événements de défilement
+    window.addEventListener('scroll', checkScroll);
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const figs = document.querySelectorAll('.skillsIcnsBox figure');
+
+    function checkScroll2() {
+        figs.forEach((fig, index) => {
+            const position2 = fig.getBoundingClientRect().top;
+
+            if (position2 < window.innerHeight && position2 > 0) {
+                setTimeout(() => {
+                    fig.classList.add('visible2');
+                }, (index + 1) * 400);
+            }
+        });
+    }
+
+    // Déclencher la fonction initiale au chargement de la page
+    checkScroll2();
+
+    // Ajouter un écouteur d'événements de défilement
+    window.addEventListener('scroll', checkScroll2);
+});
+
+
+
+
+
+
+
+
 
     </script>
 </body>
