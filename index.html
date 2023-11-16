@@ -18,6 +18,7 @@
         body {
             font-family: 'DM Serif Display', serif;
             scroll-behavior: smooth;
+            width: 100%;
         }
 
         h1,
@@ -95,7 +96,7 @@
 #drop-menu.active {
     opacity: 1;
     visibility: visible;
-    max-height: 200px; /* ou toute autre valeur appropriée */
+    max-height: 250px; /* ou toute autre valeur appropriée */
 }
 
  
@@ -176,7 +177,6 @@
     justify-content: space-around;
     background-color: #E8EDF5;
     background-image: url('assets/Soft-blue-watercolor-background-Graphics-39706046-1.jpg');
-    width: 91.5%;
     padding: 62px;
 
         }
@@ -228,6 +228,9 @@
         transform: translateX(0);
     }
 }
+
+
+
 
 .first-sec-txt.scroll-on-load-txt {
     animation: scrollTxt 2s ease-in-out;
@@ -362,11 +365,25 @@ h3.scroll-on-load-txt {
     opacity: 1;
 }
 
+.sec-projects {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.projectsTitle {
+    font-style: italic;
+  font-size: 30px;
+  margin-bottom: 12px;
+  text-align: center;
+}
 
 .card {
     display: flex;
-    width: 33%;
+    width: 35%;
+    flex-direction: column;
+    border: solid 4px black;
+    border-radius: 45px;
    
 }
 
@@ -375,14 +392,213 @@ h3.scroll-on-load-txt {
      flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
-.glrProjects img {
+.imgGlry {
     width: 100%;
+    height: 330px;
+  object-fit: cover;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+}
+
+h4 {
+    text-align: center;
+    height: 15px;
+}
+
+.textePop {
+    position: absolute;
+  width: 35.4%;
+  height: 391px;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  flex-direction: column;
+  border-radius: 45px;
+  transition: 0.3s ease;
+  margin-left: -3px;
+  margin-top: -2px;
 }
 
 
 
+.labels {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.labels label {
+    background-color: #E8EDF5;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image-container {
+    position: relative;
+    width: 150px; /* Ajustez la taille de votre conteneur selon vos besoins */
+    overflow: hidden;
+}
+
+.vibrating-image,
+.vibrating-image2,
+.vibrating-image3,
+.vibrating-image4,
+.vibrating-image5,
+.vibrating-image6 {
+    width: 100%;
+    height: auto;
+    transition: transform 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+.vibrating {
+    animation: vibration 0.8s ease-in-out infinite;
+}
+
+@keyframes vibration {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(4px, -4px); }
+    50% { transform: translate(-4px, 4px); }
+    75% { transform: translate(4px, 4px); }
+    100% { transform: translate(-4px, -4px); }
+}
+
+
+
+
+
+.secServices {
+    background-image: url('assets/Soft-blue-watercolor-background-Graphics-39706046-1.jpg');
+    height: 440px;
+    justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.servicesCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 66px;
+}
+
+.servicesCards img {
+    width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.serviceCard {
+    display: flex;
+  width: 28%;
+  flex-direction: column;
+}
+
+.servicesTitle {
+    font-style: italic;
+  font-size: 30px;
+  margin-bottom: 34px;
+  text-align: center;
+  margin-top: -20px;
+}
+
+
+
+
+
+.image-containerbis {
+  perspective: 1000px;
+}
+
+.flip-card {
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+
+
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.flip-card-back p {
+    display: flex;
+    width: 80%;
+}
+
+.blinking-arrow img {
+  width: 43px; 
+  height: auto;
+  animation: blink 1s infinite alternate;
+}
+
+.blinking-arrow {
+    display: flex;
+  justify-content: center;
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
 
    </style>
 </head>
@@ -398,7 +614,8 @@ h3.scroll-on-load-txt {
         <ul id="drop-menu">
             <li><a href="#pres">Présentation</a></li>
             <li><a href="#skills">Compétences</a></li>
-            <li><a href="#">Projets</a></li>
+            <li><a href="#projetsSec">Projets</a></li>
+            <li><a href="#sec-services">Services</a></li>
         </ul>
     </div>
     </nav>
@@ -476,61 +693,355 @@ h3.scroll-on-load-txt {
     </div>
 </div>
    </section>
-    <section>
+    <section class="sec-projects" id="projetsSec">
 
 
     
-        <h3>Mes projets</h3>
+        <h3 class="projectsTitle">Mes projets</h3>
         <div class="glrProjects">
 
-        <div class="card">
-        <h4>Titre</h4>
-        <img src="./assets/Capture d’écran (1393).png">
+        <div class="card" onmouseover="displayTxt(this)" onmouseout="hideTxt(this)">
+        
+        <img src="./assets/Capture d’écran (1393).png" class="imgGlry">
+        <h4>Nina Carducci - Site professionnel</h4>
+        <div class="textePop">
+            <div class="image-container" id="image1" >
+                <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image">
+            </div>
+            <div class="labels" >
+            <label for="SASS">CSS</label>
+            <label>HTML</label>
+            <label>Javascript</label>
+        </div>
+        </div>
 
         </div>
          
-        <div class="card">
-            <h4>Titre</h4>
-            <img src="./assets/Capture d’écran (1386).png">
-    
+        <div class="card" onmouseover="displayTxt(this)" onmouseout="hideTxt(this)" >
+            
+            <img src="./assets/Capture d’écran (1386).png" class="imgGlry">
+            <h4>Argent Bank - Application React</h4>
+            <div class="textePop">
+                <div class="image-container" id="image2">
+                    <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image2">
+                </div>
+                <div class="labels" >
+                <label for="SASS">MongoDB</label>
+                <label>React</label>
+                <label>Redux</label>
+                <label>Javascript</label>
+            </div>
+            </div>
+
             </div>
 
 
-            <div class="card">
-                <h4>Titre</h4>
-                <img src="./assets/Capture d’écran (1388).png">
-        
+            <div class="card" onmouseover="displayTxt(this)" onmouseout="hideTxt(this)" >
+                
+                <img src="./assets/Capture d’écran (1388).png" class="imgGlry">
+                <h4>Kasa - Plateforme de réservation de logements</h4>
+                <div class="textePop">
+                    <div class="image-container" id="image3">
+                        <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image3">
+                    </div>
+                    <div class="labels">
+                    <label for="SASS">SASS</label>
+                    <label>React</label>
+                    <label>Javascript</label>
+                </div>
                 </div>
 
-                <div class="card">
-                    <h4>Titre</h4>
-                    <img src="./assets/Capture d’écran (1389).png">
-            
+                </div>
+
+                <div class="card" onmouseover="displayTxt(this)" onmouseout="hideTxt(this)" >
+                    
+                    <img src="./assets/Capture d’écran (1389).png" class="imgGlry" >
+                    <h4>Booki - Plateforme d'hébergements</h4>
+                    <div class="textePop">
+                        <div class="image-container" id="image4">
+                            <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image4">
+                        </div>
+                        <div class="labels" >
+                        <label for="SASS">CSS</label>
+                        <label>HTML</label>
+                    </div>
                     </div>
 
-                    <div class="card">
-                        <h4>Titre</h4>
-                        <img src="./assets/Capture d’écran (1391).png">
-                
+                    </div>
+
+                    <div class="card" onmouseover="displayTxt(this)" onmouseout="hideTxt(this)">
+                        
+                        <img src="./assets/Capture d’écran (1391).png" class="imgGlry" >
+                        <h4>OhMyFood - Plateforme de restauration</h4>
+                        <div class="textePop">
+                            <div class="image-container" id="image5">
+                                <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image5">
+                            </div>
+                            <div class="labels">
+                            <label for="SASS">CSS</label>
+                            <label>HTML</label>
+                        </div>
                         </div>
 
-                        <div class="card">
-                            <h4>Titre</h4>
-                            <img src="./assets/Capture d’écran (1392).png">
-                    
+                        </div>
+
+                        <div class="card" onmouseover="displayTxt(this)" onmouseout="hideTxt(this)">
+                            
+                            <img src="./assets/Capture d’écran (1392).png" class="imgGlry" >
+                            <h4>Sophie Buel - Site professionnel</h4>
+                            <div class="textePop">
+                                    <div class="image-container" id="image6">
+                                        <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image6">
+                                    </div>
+                                <div class="labels">
+                                <label for="SASS">CSS</label>
+                                <label>HTML</label>
+                                <label>Javascript</label>
+                            </div>
                             </div>
 
+                         </div>
+
         </div>
+
+</section>
+
+<section class="secServices" id="sec-services">
+
+<h3 class="servicesTitle">Mes services</h3>
+
+<div class="servicesCards">
+
+    <div class="serviceCard">
+
+        <div class="blinking-arrow">
+            <img src="./assets/fleche-vers-le-bas.png" alt="Arrow">
+          </div>
+        <div class="image-containerbis" onclick="flipImage(1)">
+            <div class="flip-card flip-card-1">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="./assets/téléchargement.png">
+                </div>
+                <div class="flip-card-back">
+                <p>Je réalise l'intégration de vos sites et applications web. Je prends en charge de A à Z votre interface utilisateur.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <h4>Développement 
+        </br>Front End</h4> 
+    </div>
+
+    <div class="serviceCard">
+
+        <div class="blinking-arrow">
+            <img src="./assets/fleche-vers-le-bas.png" alt="Arrow">
+          </div>
+        <div class="image-containerbis" onclick="flipImage(2)">
+            <div class="flip-card flip-card-2">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="./assets/téléchargement (1).png">
+                </div>
+                <div class="flip-card-back">
+                <p>Je conçois les éléments techniques </br> de la partie serveur et base de données de votre projet.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <h4>Développement 
+        </br>Back End</h4>
+    </div>
+
+<div class="serviceCard">
+    <div class="blinking-arrow">
+        <img src="./assets/fleche-vers-le-bas.png" alt="Arrow">
+      </div>
+    <div class="image-containerbis" onclick="flipImage(3)">
+        <div class="flip-card flip-card-3">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="./assets/front-end-development-abstract-concept-vector-illustration-2H5FGTR.jpg">
+            </div>
+            <div class="flip-card-back">
+            <p>J'effectue l'audit de votre projet et applique les correctifs </br> néessaire à ses performances, son accessibilité ou encore son SEO.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <h4>Audit, SEO</h4>
+</div>
+
+
+
+</div>
+
 
 </section>
 
 
 
 
-
-
     <script>
         
+
+        let isFlipped = {
+  1: false,
+  2: false,
+  3: false
+};
+
+function flipImage(imageNumber) {
+  const flipCard = document.querySelector(`.flip-card-${imageNumber}`);
+  
+  if (!isFlipped[imageNumber]) {
+    flipCard.style.transform = 'rotateY(180deg)';
+  } else {
+    flipCard.style.transform = 'rotateY(0deg)';
+  }
+
+  isFlipped[imageNumber] = !isFlipped[imageNumber];
+}
+
+
+
+
+
+
+
+
+        function startVibration() {
+    const image = document.querySelector('.vibrating-image');
+    image.classList.add('vibrating');
+}
+
+function stopVibration() {
+    const image = document.querySelector('.vibrating-image');
+    image.classList.remove('vibrating');
+}
+
+
+var imageId = 'image1';
+
+document.getElementById(imageId).addEventListener('mouseenter', function() {
+    startVibration(imageId);
+});
+
+document.getElementById('image1').addEventListener('mouseout', function() {
+    stopVibration('image1');
+});
+
+document.getElementById('image2').addEventListener('mouseenter', function() {
+    startVibration2('image2');
+});
+
+
+document.getElementById('image2').addEventListener('mouseout', function() {
+    stopVibration2('image2');
+});
+
+document.getElementById('image3').addEventListener('mouseenter', function() {
+    startVibration3('image3');
+});
+
+
+document.getElementById('image3').addEventListener('mouseout', function() {
+    stopVibration3('image3');
+});
+
+document.getElementById('image4').addEventListener('mouseenter', function() {
+    startVibration4('image4');
+});
+
+
+document.getElementById('image4').addEventListener('mouseout', function() {
+    stopVibration4('image4');
+});
+
+document.getElementById('image5').addEventListener('mouseenter', function() {
+    startVibration5('image5');
+});
+
+
+document.getElementById('image5').addEventListener('mouseout', function() {
+    stopVibration5('image5');
+});
+
+document.getElementById('image6').addEventListener('mouseenter', function() {
+    startVibration6('image6');
+});
+
+
+document.getElementById('image6').addEventListener('mouseout', function() {
+    stopVibration6('image6');
+});
+
+
+
+
+
+
+
+
+function startVibration2() {
+    const image = document.querySelector('.vibrating-image2');
+    image.classList.add('vibrating');
+}
+
+function stopVibration2() {
+    const image = document.querySelector('.vibrating-image2');
+    image.classList.remove('vibrating');
+}
+
+function startVibration3() {
+    const image = document.querySelector('.vibrating-image3');
+    image.classList.add('vibrating');
+}
+
+function stopVibration3() {
+    const image = document.querySelector('.vibrating-image3');
+    image.classList.remove('vibrating');
+}
+
+function startVibration4() {
+    const image = document.querySelector('.vibrating-image4');
+    image.classList.add('vibrating');
+}
+
+function stopVibration4() {
+    const image = document.querySelector('.vibrating-image4');
+    image.classList.remove('vibrating');
+}
+
+function startVibration5() {
+    const image = document.querySelector('.vibrating-image5');
+    image.classList.add('vibrating');
+}
+
+function stopVibration5() {
+    const image = document.querySelector('.vibrating-image5');
+    image.classList.remove('vibrating');
+}
+
+function startVibration6() {
+    const image = document.querySelector('.vibrating-image6');
+    image.classList.add('vibrating');
+}
+
+function stopVibration6() {
+    const image = document.querySelector('.vibrating-image6');
+    image.classList.remove('vibrating');
+}
+
+
+
+
+
+
+
+
+
         document.addEventListener("DOMContentLoaded", function () {
     const menuTrigger = document.getElementById("menu-trigger");
     const dropdownMenu = document.getElementById("drop-menu");
@@ -612,8 +1123,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+function displayTxt(card) {
+    card.querySelector('.textePop').style.display = 'flex';
+}
 
-
+function hideTxt(card) {
+    card.querySelector('.textePop').style.display = 'none';
+}
 
 
 
