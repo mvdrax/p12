@@ -15,10 +15,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400&family=Work+Sans&display=swap" rel="stylesheet">
     <title>Portofolio</title>
     <style>
+
+      /* * {
+    box-shadow: 0 0 0 3px red
+    inset;
+} */
+
         body {
             font-family: 'DM Serif Display', serif;
             scroll-behavior: smooth;
             width: 100%;
+            margin: 0;
         }
 
         h1,
@@ -96,7 +103,7 @@
 #drop-menu.active {
     opacity: 1;
     visibility: visible;
-    max-height: 250px; /* ou toute autre valeur appropriée */
+    max-height: 310px;
 }
 
  
@@ -187,7 +194,8 @@
 
         .backgimg {
             display: flex;
-            height: 233px;
+            height: 100%;
+            width: 50%;
             border-radius: 45px;
             margin-top: 20px;
             opacity: 0.8;
@@ -294,10 +302,10 @@ h3.scroll-on-load-txt {
 }
    
 .skillsIcnsBox {
-    display: flex;
-    width: 77%;
+  display: flex;
+  width: 90%;
   gap: 36px;
-
+  justify-content: center;
 }
 
 .skillsIcnsBox img {
@@ -369,6 +377,7 @@ h3.scroll-on-load-txt {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: #E8EDF5;
 }
 
 .projectsTitle {
@@ -432,7 +441,7 @@ h4 {
     display: flex;
     flex-direction: row;
     gap: 15px;
-    margin-top: 50px;
+    margin-top: 0;
 }
 
 .labels label {
@@ -444,8 +453,22 @@ h4 {
     padding-bottom: 5px;
 }
 
+.labelsAndText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.labelsAndText p {
+    text-align: center;
+    background-color: white;
+    width: 90%;
+  border-radius: 30px;
+  border: 3px solid black;
+  padding: 10px;
+  font-size: 15px;
 
+}
 
 
 
@@ -459,7 +482,7 @@ h4 {
 
 .image-container {
     position: relative;
-    width: 150px; /* Ajustez la taille de votre conteneur selon vos besoins */
+    width: 150px; 
     overflow: hidden;
 }
 
@@ -473,6 +496,7 @@ h4 {
     height: auto;
     transition: transform 0.8s ease-in-out;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .vibrating {
@@ -504,10 +528,10 @@ h4 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 66px;
+    gap: 180px;
 }
 
-.servicesCards img {
+.servicesIMG {
     width: 100%;
   height: 200px;
   border-radius: 10px;
@@ -516,7 +540,7 @@ h4 {
 
 .serviceCard {
     display: flex;
-  width: 28%;
+  width: 35%;
   flex-direction: column;
 }
 
@@ -600,13 +624,561 @@ h4 {
   }
 }
 
+
+
+.sectionForm {
+    height: 1000px;
+}
+
+
+.formAndCv {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.btnCV {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.titleCV {
+    text-align: left;
+    font-style: italic;
+    font-size: 30px;
+}
+
+
+
+
+.formCV a {
+    width: 100%;
+    justify-content: center;
+  display: flex;
+}
+
+.imgCV {
+    display: inline-block;
+    animation: spin 2s infinite linear;
+    width: 55%;
+    border-radius: 90px;
+}
+
+.formInfos {
+  width: 100%;
+  height: 1110px;
+}
+
+.formContact {
+    width: 70%;
+}
+
+.formCV {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+
+    #first-sec {
+        flex-direction: column;
+    }
+
+    .backgimg {
+        display: none;
+    }
+
+    .avatar {
+  width: 77px;
+  height: 77px;
+  margin-right: 7%;
+}
+
+.pres p {
+    width: 100%;
+    font-size: 13px;
+}
+
+.presTxtAndTile {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.pres h3 {
+    font-size: 20px;
+}
+.pres {
+    height: 370px;
+}
+
+.skillsIcnsBox {
+  display: flex;
+  width: 77%;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+
+.skillsIcnsBox figure {
+  width: 28%;
+  height: 82px;
+}
+
+#menu-container {
+ height: 0;
+}
+
+.skills h3 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.card {
+  display: flex;
+  width: 81%;
+  flex-direction: column;
+  border: solid 4px black;
+  border-radius: 45px;
+  height: 300px;
+}
+
+h4 {
+  text-align: center;
+  height: 15px;
+  font-size: 12px;
+}
+
+
+.textePop {
+  
+  width: 82.4%;
+  height: 303px;
+  
+}
+
+.labelsAndText p {
+  text-align: center;
+  background-color: white;
+  width: 90%;
+  border-radius: 30px;
+  border: 3px solid black;
+  padding: 10px;
+  font-size: 11px;
+}
+
+.labels label {
+  font-size: 10px;
+}
+
+.image-container {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  margin-left: 26%;
+}
+
+.labelsAndText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.labels {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    margin-top: -20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+.secServices {
+  
+  height: 800px;
+  
+}
+
+.servicesCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 52px;
+}
+
+.serviceCard {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicesIMG {
+    width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.formInfos {
+  width: 100%;
+  height: 1110px;
+}
+
+.formAndCv {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column-reverse;
+  margin-top: 0;
+}
+
+.imgCV {
+  width: 55%;
+  border-radius: 90px;
+}
+
+.titleCV {
+  text-align: center;
+  font-style: italic;
+  font-size: 23px;
+}
+
+#header {
+  background-color: #E8EDF5;
+  color: #333;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 60px;
+  margin-top: -56px;
+
+}
+
+
+h1 {
+  font-size: 32px;
+}
+
+
+h1, h2 {
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 28px;
+}
+
+#menu-container {
+  position: relative;
+  width: 135px;
+  height: 0;
+  margin-top: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#drop-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.formContact {
+  width: 100%;
+}
+
+}
+
+
+
+
+
+@media only screen and (min-width: 401px) and (max-width: 1040px) {
+
+    .formInfos {
+  width: 100%;
+  height: 1110px;
+}
+
+.formContact {
+    width: 80%;
+}
+
+.formCV {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  margin-right: 7%;
+}
+
+.pres p {
+    width: 100%;
+    font-size: 16px;
+}
+
+.presTxtAndTile {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.pres h3 {
+    font-size: 20px;
+}
+.pres {
+    height: 292px;
+}
+
+.backgimg {
+        display: none;
+    }
+
+
+    .skillsIcnsBox {
+  display: flex;
+  width: 77%;
+  gap: 56px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skillsIcnsBox figure {
+  width: 17%;
+  height: 82px;
+}
+
+
+.labels {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  margin-top: 0;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.labelsAndText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.labelsAndText p {
+  font-size: 13px;
+}
+
+.labels label {
+    font-size: 13px;
+}
+
+.image-container {
+    width: 120px;
+}
+
+h4 {
+  text-align: center;
+  height: 15px;
+  font-size: 13px;
+  
+}
+
+.textePop {
+    height: 385px;
+}
+
+.serviceCard {
+  display: flex;
+  width: 43%;
+  flex-direction: column;
+}
+
+.servicesCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 72px;
+}
+
+.servicesIMG {
+    width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 401px) and (max-width: 640px) {
+
+    .pres {
+    height: 372px;
+}
+
+.pres p {
+    width: 100%;
+    font-size: 15px;
+}
+
+.glrProjects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.textePop {
+    width: 70%;
+    margin: 0;
+}
+
+.card {
+    width: 70%;
+}
+
+.servicesCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 27px;
+  }
+
+.serviceCard {
+  display: flex;
+  width: 43%;
+  flex-direction: column;
+}
+
+.servicesIMG {
+  width: 86%;
+  height: 182px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.skillsIcnsBox {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+@media only screen and (min-width: 401px) and (max-width: 700px) {
+
+    .labels {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  margin-top: 0;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.labelsAndText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.labelsAndText p {
+  font-size: 12px;
+}
+
+.labels label {
+    font-size: 12px;
+}
+
+.image-container {
+    width: 120px;
+}
+
+h4 {
+  text-align: center;
+  height: 15px;
+  font-size: 12px;
+  
+}
+
+.textePop {
+    height: 382px;
+  }
+
+  .skillsIcnsBox {
+    display: flex;
+    width: 77%;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .servicesIMG {
+    width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+}
+
+
+
    </style>
 </head>
 <body>
     <header id="header" >
     <nav class="main-nav">
         
-        <img src="/assets/OIG.GKfC.jpg" class="logoimg">
+        <img src="./assets/OIG.GKfC.jpg" class="logoimg">
         
      
     <div id="menu-container">
@@ -616,6 +1188,7 @@ h4 {
             <li><a href="#skills">Compétences</a></li>
             <li><a href="#projetsSec">Projets</a></li>
             <li><a href="#sec-services">Services</a></li>
+            <li><a href="#section-form">Contact & CV</a></li>
         </ul>
     </div>
     </nav>
@@ -629,16 +1202,22 @@ h4 {
         Web Developer
     </h2> 
     <div class="contact-icns">
+        <a href="https://github.com/mvdrax" target="_blank">
     <img src="./assets/25231.png" class="icnglg">
+        </a>
+        <a href="https://linkedin.com/in/madeleine-biron-566b0411b/" target="_blank">
     <img src="./assets/linkedin_icon_135436.png" class="icnglg">
+        </a>
+        <a href="mailto:mdln.brn.zbd@gmail.com">
     <img src="./assets/324100.png" class="icnglg">
+        </a>
     </div>
     </div>
     <img src="./assets/backg.jpg" class="backgimg scroll-on-load">
 
     </section>
     <section class="pres" id="pres">
-        <div>
+        <div class="presTxtAndTile">
         <h3 class="scroll-on-load-txt" >
             A propos de moi
         </h3>
@@ -705,14 +1284,20 @@ h4 {
         <img src="./assets/Capture d’écran (1393).png" class="imgGlry">
         <h4>Nina Carducci - Site professionnel</h4>
         <div class="textePop">
+            <a href="https://github.com/mvdrax/Nina-Carducci---Version-Finale" target="_blank">
             <div class="image-container" id="image1" >
                 <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image">
+            </div></a>
+            <div class="labelsAndText">
+                <p>Le projet consistait à réaliser l'audit du site web d'une photographe. Il fallait apporter les modifications de CSS et de script nécessaires afin
+                    d'améliorer ses performances et son accessibilité. Il fallait également travailler sur son SEO.  </p> 
+                <div class="labels">
+                <label for="SASS">CSS</label>
+                <label>HTML</label>
+                <label>Javascript</label>
+                </div>
             </div>
-            <div class="labels" >
-            <label for="SASS">CSS</label>
-            <label>HTML</label>
-            <label>Javascript</label>
-        </div>
+            
         </div>
 
         </div>
@@ -722,15 +1307,24 @@ h4 {
             <img src="./assets/Capture d’écran (1386).png" class="imgGlry">
             <h4>Argent Bank - Application React</h4>
             <div class="textePop">
+                <a href="https://github.com/mvdrax/ArgentBank--version-finale" target="_blank">
                 <div class="image-container" id="image2">
                     <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image2">
                 </div>
-                <div class="labels" >
-                <label for="SASS">MongoDB</label>
-                <label>React</label>
-                <label>Redux</label>
-                <label>Javascript</label>
-            </div>
+                </a>
+                <div class="labelsAndText">
+                    <p>Le projet consistait à créer une application bancaire sous React en utilisant la bibliothèque Redux.
+                        Il fallait créer les interfaces "connecté et "non connecté" en faisant appel à la base de données MongoDB. </p> 
+                    <div class="labels">
+                    <label for="SASS">MongoDB</label>
+                    <label>React</label>
+                    <label>Redux</label>
+                    <label>Javascript</label>
+                    </div>
+                </div>
+                
+                
+            
             </div>
 
             </div>
@@ -741,14 +1335,23 @@ h4 {
                 <img src="./assets/Capture d’écran (1388).png" class="imgGlry">
                 <h4>Kasa - Plateforme de réservation de logements</h4>
                 <div class="textePop">
+                    <a href="https://github.com/mvdrax/KasaFinal" target="_blank">
                     <div class="image-container" id="image3">
                         <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image3">
                     </div>
-                    <div class="labels">
-                    <label for="SASS">SASS</label>
-                    <label>React</label>
-                    <label>Javascript</label>
-                </div>
+                    </a>
+                    <div class="labelsAndText">
+                        <p>Le projet consistait à créer une application React consacrée à la réservation d'hébergments de vacances. 
+                            Il fallait élaborer le SASS et créer des fonctions Javascript afin d'obtenir une application à l'esthétique dynamique.</p> 
+                        <div class="labels">
+                        <label for="SASS">SASS</label>
+                        <label>React</label>
+                        <label>Javascript</label>
+                        </div>
+                    </div>
+                    
+                    
+               
                 </div>
 
                 </div>
@@ -758,13 +1361,22 @@ h4 {
                     <img src="./assets/Capture d’écran (1389).png" class="imgGlry" >
                     <h4>Booki - Plateforme d'hébergements</h4>
                     <div class="textePop">
+                        <a href="https://github.com/mvdrax/Booki" target="_blank">
                         <div class="image-container" id="image4">
                             <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image4">
                         </div>
-                        <div class="labels" >
-                        <label for="SASS">CSS</label>
-                        <label>HTML</label>
-                    </div>
+                        </a>
+                        <div class="labelsAndText">
+                            <p>Le projet consistait à créer l'interface d'accueil d'une plateforme de 
+                                réservation de logements de vacances. Il fallait coder l'ensemble du CSS.  </p> 
+                            <div class="labels">
+                            <label for="SASS">CSS</label>
+                           <label>HTML</label>
+                            </div>
+                        </div>
+                        
+                        
+                    
                     </div>
 
                     </div>
@@ -774,13 +1386,21 @@ h4 {
                         <img src="./assets/Capture d’écran (1391).png" class="imgGlry" >
                         <h4>OhMyFood - Plateforme de restauration</h4>
                         <div class="textePop">
+                            <a href="https://github.com/mvdrax/Ohmyfood" target="_blank">
                             <div class="image-container" id="image5">
                                 <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image5">
                             </div>
-                            <div class="labels">
-                            <label for="SASS">CSS</label>
-                            <label>HTML</label>
-                        </div>
+                            </a>
+                            <div class="labelsAndText">
+                                <p>Le projet consistait à créer une plateforme pour les restaurateurs à destination 
+                                    de leur clientèle pour que cette dernière ait accès à leur carte. 
+                                    Il fallait générer des animations CSS fidèles à la maquette fournie.
+                                     </p> 
+                                <div class="labels">
+                                    <label for="SASS">CSS</label>
+                                    <label>HTML</label>
+                                </div>
+                            </div>
                         </div>
 
                         </div>
@@ -790,13 +1410,19 @@ h4 {
                             <img src="./assets/Capture d’écran (1392).png" class="imgGlry" >
                             <h4>Sophie Buel - Site professionnel</h4>
                             <div class="textePop">
+                                <a href="https://github.com/mvdrax/Sophie-Bluel" target="_blank">
                                     <div class="image-container" id="image6">
                                         <img src="./assets/782737.png" alt="Votre Image" class="vibrating-image6">
                                     </div>
+                                </a> 
+                                <div class="labelsAndText">
+                                <p>Le projet consistait à rendre fonctionnel le site d'une architecte. Il fallait créer des requêtes API
+                                    ainsi que des modales afin de permettre au client de publier ses projets ou encore de les supprimer.  </p> 
                                 <div class="labels">
                                 <label for="SASS">CSS</label>
                                 <label>HTML</label>
                                 <label>Javascript</label>
+                                </div>
                             </div>
                             </div>
 
@@ -821,7 +1447,7 @@ h4 {
             <div class="flip-card flip-card-1">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="./assets/téléchargement.png">
+                    <img src="./assets/téléchargement.png" class="servicesIMG">
                 </div>
                 <div class="flip-card-back">
                 <p>Je réalise l'intégration de vos sites et applications web. Je prends en charge de A à Z votre interface utilisateur.</p>
@@ -833,26 +1459,7 @@ h4 {
         </br>Front End</h4> 
     </div>
 
-    <div class="serviceCard">
-
-        <div class="blinking-arrow">
-            <img src="./assets/fleche-vers-le-bas.png" alt="Arrow">
-          </div>
-        <div class="image-containerbis" onclick="flipImage(2)">
-            <div class="flip-card flip-card-2">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="./assets/téléchargement (1).png">
-                </div>
-                <div class="flip-card-back">
-                <p>Je conçois les éléments techniques </br> de la partie serveur et base de données de votre projet.</p>
-                </div>
-            </div>
-            </div>
-        </div>
-        <h4>Développement 
-        </br>Back End</h4>
-    </div>
+    
 
 <div class="serviceCard">
     <div class="blinking-arrow">
@@ -862,7 +1469,7 @@ h4 {
         <div class="flip-card flip-card-3">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img src="./assets/front-end-development-abstract-concept-vector-illustration-2H5FGTR.jpg">
+                <img src="./assets/front-end-development-abstract-concept-vector-illustration-2H5FGTR.jpg" class="servicesIMG" >
             </div>
             <div class="flip-card-back">
             <p>J'effectue l'audit de votre projet et applique les correctifs </br> néessaire à ses performances, son accessibilité ou encore son SEO.</p>
@@ -872,12 +1479,31 @@ h4 {
     </div>
     <h4>Audit, SEO</h4>
 </div>
-
-
-
 </div>
 
+</section>
+<section class="sectionForm" id="section-form">
+    <div class="formAndCv">
+     
+    
+    <div class="formContact">
+        <iframe class="formInfos" src="https://docs.google.com/forms/d/e/1FAIpQLScdCn64JxgMnPhuAIZMIDx3ZnA4CrSp27WO_SSymSYxM9ZTNQ/viewform?embedded=true" 
+        frameborder="0" marginheight="0" marginwidth="0" >Chargement… </iframe>
+    </div>
 
+    <div class="formCV">
+        
+                <h4 class="titleCV">Curriculum vitæ</h4>
+               
+              <a href="./assets/files/CV de Madeleine Biron.pdf" download="CV de Madeleine Biron.pdf" target="_blank"> 
+                <img class="imgCV" src="./assets/images.png"></a> 
+            
+        
+    </div>
+
+
+
+    </div> 
 </section>
 
 
@@ -888,7 +1514,6 @@ h4 {
 
         let isFlipped = {
   1: false,
-  2: false,
   3: false
 };
 
@@ -1092,10 +1717,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Déclencher la fonction initiale au chargement de la page
+   
     checkScroll();
 
-    // Ajouter un écouteur d'événements de défilement
+    
     window.addEventListener('scroll', checkScroll);
 });
 
@@ -1115,10 +1740,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Déclencher la fonction initiale au chargement de la page
+    
     checkScroll2();
 
-    // Ajouter un écouteur d'événements de défilement
+   
     window.addEventListener('scroll', checkScroll2);
 });
 
